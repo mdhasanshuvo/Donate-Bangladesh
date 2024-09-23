@@ -16,7 +16,7 @@ document.getElementById('btn-donate-noa').addEventListener('click', function () 
     const totalBalanceNum = getTextValueByID('balance')
 
     // Check greater donation from balance
-    if (inputNumber > totalBalanceNum) {
+    if (inputNumber > totalBalanceNum || inputNumber < 1) {
         alert("Invalid Donation Amount.");
         document.getElementById('input-donate-noa').value = '';
         return;
@@ -68,7 +68,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
     const totalBalanceNum = getTextValueByID('balance')
 
     // Check greater donation from balance
-    if (inputNumber > totalBalanceNum) {
+    if (inputNumber > totalBalanceNum || inputNumber < 1) {
         alert("Invalid Donation Amount.");
         document.getElementById('input-donate-feni').value = '';
         return;
@@ -121,7 +121,7 @@ document.getElementById('btn-donate-protest').addEventListener('click', function
     const totalBalanceNum = getTextValueByID('balance')
 
     // Check greater donation from balance
-    if (inputNumber > totalBalanceNum) {
+    if (inputNumber > totalBalanceNum || inputNumber < 1) {
         alert("Invalid Donation Amount.");
         document.getElementById('input-donate-protest').value = '';
         return;
@@ -173,3 +173,7 @@ document.getElementById('btn-history').addEventListener('click', function () {
 })
 // Show Sections end
 
+
+document.getElementById('blog-page').addEventListener('click', function(){
+    window.location.href = './blog.html';
+})
