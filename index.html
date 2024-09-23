@@ -47,6 +47,7 @@
     </header>
 
     <main class="container mx-auto py-20">
+        
         <section class="flex flex-col justify-center gap-8">
             <!-- Donation And History Button -->
             <div class="flex justify-center gap-5">
@@ -66,7 +67,7 @@
                         <button class="btn w-max">
                             <img src="assets/coin.png" alt="">
                             <div class="text-[#111111b3] flex text-base">
-                                <div id="feni-donation" class="mr-2">1000</div>
+                                <div id="total-donation-noa" class="mr-2">1000</div>
                                 <span>BDT</span>
                             </div>
                         </button>
@@ -76,10 +77,10 @@
                             donation will help provide essential supplies and to those affected by this disaster. Every
                             contribution, big or small, makes difference. Please join us in supporting the relief
                             efforts and making a positive impact on the lives of those in need.</p>
-                        <input type="text" placeholder="Write Donation Amount"
+                        <input id="input-donate-noa" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered w-full" />
                         <div class="card-actions">
-                            <button id="donate-btn-noa" class="btn w-full bg-[#B4F461] font-semibold text-xl text-[#111] border-transparent">Donate Now</button>
+                            <button id="btn-donate-noa" class="btn w-full bg-[#B4F461] font-semibold text-xl text-[#111] border-transparent">Donate Now</button>
                         </div>
                     </div>
                 </div>
@@ -87,8 +88,11 @@
             
         </section>
 
+
+
     </main>
 
+    <script src="js/utilities.js"></script>
     <script src="js/main.js"></script>
 </body>
 
