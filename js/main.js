@@ -1,3 +1,6 @@
+
+// Card 1 functionality start
+
 document.getElementById('btn-donate-noa').addEventListener('click', function () {
     const inputNumber = getInputFieldValueById('input-donate-noa');
 
@@ -32,13 +35,129 @@ document.getElementById('btn-donate-noa').addEventListener('click', function () 
     alert("Donation Added");
     // different work
     // different work
-    
+
     document.getElementById('input-donate-noa').value = '';
 
     // Add donate History
-    historyAdding('Flood at Noakhali',inputNumber);
+    historyAdding('Flood at Noakhali', inputNumber);
 
 })
+
+// Card 1 functionality end
+
+
+
+
+
+
+
+// Card 2 functionality start
+
+document.getElementById('btn-donate-feni').addEventListener('click', function () {
+    const inputNumber = getInputFieldValueById('input-donate-feni');
+
+    // Check donation amount validation
+    if (isNaN(inputNumber)) {
+        alert("Invalid Donation Amount.");
+        document.getElementById('input-donate-feni').value = '';
+        return;
+    }
+
+    const totalDonationNum = getTextValueByID('total-donation-feni');
+
+    const totalBalanceNum = getTextValueByID('balance')
+
+    // Check greater donation from balance
+    if (inputNumber > totalBalanceNum) {
+        alert("Invalid Donation Amount.");
+        document.getElementById('input-donate-feni').value = '';
+        return;
+    }
+
+    // Total Donation Calculation
+    const finalDonation = totalDonationNum + inputNumber;
+    document.getElementById('total-donation-feni').innerText = finalDonation;
+
+    // Balance Calculation
+    const finalBalance = totalBalanceNum - inputNumber;
+    document.getElementById('balance').innerText = finalBalance;
+
+    // different work
+    // different work
+    alert("Donation Added");
+    // different work
+    // different work
+
+    document.getElementById('input-donate-feni').value = '';
+
+    // Add donate History
+    historyAdding('Flood Relief in Feni', inputNumber);
+
+})
+
+// Card 2 functionality end
+
+
+
+
+
+
+
+
+// Card 3 functionality start
+
+document.getElementById('btn-donate-protest').addEventListener('click', function () {
+    const inputNumber = getInputFieldValueById('input-donate-protest');
+
+    // Check donation amount validation
+    if (isNaN(inputNumber)) {
+        alert("Invalid Donation Amount.");
+        document.getElementById('input-donate-protest').value = '';
+        return;
+    }
+
+    const totalDonationNum = getTextValueByID('total-donation-protest');
+
+    const totalBalanceNum = getTextValueByID('balance')
+
+    // Check greater donation from balance
+    if (inputNumber > totalBalanceNum) {
+        alert("Invalid Donation Amount.");
+        document.getElementById('input-donate-protest').value = '';
+        return;
+    }
+
+    // Total Donation Calculation
+    const finalDonation = totalDonationNum + inputNumber;
+    document.getElementById('total-donation-protest').innerText = finalDonation;
+
+    // Balance Calculation
+    const finalBalance = totalBalanceNum - inputNumber;
+    document.getElementById('balance').innerText = finalBalance;
+
+    // different work
+    // different work
+    alert("Donation Added");
+    // different work
+    // different work
+
+    document.getElementById('input-donate-protest').value = '';
+
+    // Add donate History
+    historyAdding('Aid for Injured in the Quota Movement', inputNumber);
+
+})
+
+// Card 2 functionality end
+
+
+
+
+
+
+
+
+
 
 // Show Sections start
 document.getElementById('btn-donation').addEventListener('click', function () {

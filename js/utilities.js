@@ -1,3 +1,4 @@
+// input field to number function
 function getInputFieldValueById(id) {
     const inputValue = document.getElementById(id).value;
     const inputNumber = parseFloat(inputValue);
@@ -5,6 +6,8 @@ function getInputFieldValueById(id) {
     return inputNumber;
 }
 
+
+// Html tag to number function
 function getTextValueByID(id) {
     const textValue = document.getElementById(id).innerText;
     const textNumber = parseFloat(textValue);
@@ -12,6 +15,8 @@ function getTextValueByID(id) {
     return textNumber;
 }
 
+
+// Show Sections function
 function showSectionById(id) {
     document.getElementById('donationCards').classList.add('hidden');
     document.getElementById('historySection').classList.add('hidden');
@@ -20,6 +25,8 @@ function showSectionById(id) {
     document.getElementById(id).classList.remove('hidden');
 }
 
+
+// Add donate History Function
 function historyAdding(where,money) {
     const history = document.getElementById('historySection');
     const historyDiv = document.createElement('div');
