@@ -47,21 +47,22 @@
     </header>
 
     <main class="container mx-auto py-20">
-        
-        <section class="flex flex-col justify-center gap-8">
-            <!-- Donation And History Button -->
-            <div class="flex justify-center gap-5">
-                <button class="btn btn-outline text-xl">Donation</button>
-                <button class="btn btn-outline text-xl">History</button>
-            </div>
 
-            <!-- Donation Cards -->
+        <!-- Donation And History Button section -->
+        <section class="flex justify-center gap-5 mb-8">
+            <button id="btn-donation" class="btn text-xl bg-[#B4F461]">Donation</button>
+            <button id="btn-history" class="btn text-xl">History</button>
+        </section>
 
+        <!-- Donation Cards Section -->
+        <section id="donationCards" class="flex flex-col justify-center gap-8 ">
+            <!-- Donation Cards Container -->
             <div>
                 <!-- Card 1 -->
                 <div class="card md:card-side border p-8 gap-8 ">
                     <div class="md:w-1/2">
-                        <img class="w-full h-full  object-cover rounded-xl" src="assets/noakhali.png" alt="Noakhali Image" />
+                        <img class="w-full h-full  object-cover rounded-xl" src="assets/noakhali.png"
+                            alt="Noakhali Image" />
                     </div>
                     <div class="card-body space-y-5 md:w-1/2 p-0 flex justify-center">
                         <button class="btn w-max">
@@ -73,22 +74,26 @@
                         </button>
                         <h2 class="card-title text-xl font-bold text-[#111]">Donate for Flood at Noakhali, Bangladesh
                         </h2>
-                        <p class="text-base text-[#111111b3]"> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                        <p class="text-base text-[#111111b3]"> The recent floods in Noakhali have caused significant
+                            damage to homes infrastructure. Your
                             donation will help provide essential supplies and to those affected by this disaster. Every
                             contribution, big or small, makes difference. Please join us in supporting the relief
                             efforts and making a positive impact on the lives of those in need.</p>
                         <input id="input-donate-noa" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered w-full" />
                         <div class="card-actions">
-                            <button id="btn-donate-noa" class="btn w-full bg-[#B4F461] font-semibold text-xl text-[#111] border-transparent">Donate Now</button>
+                            <button id="btn-donate-noa"
+                                class="btn w-full bg-[#B4F461] font-semibold text-xl text-[#111] border-transparent">Donate
+                                Now</button>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
-
+        <!-- History Section -->
+        <section id="historySection" class="hidden space-y-6"></section>
 
     </main>
 

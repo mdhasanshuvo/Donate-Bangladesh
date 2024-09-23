@@ -1,4 +1,4 @@
-function getInputFieldValueById(id){
+function getInputFieldValueById(id) {
     const inputValue = document.getElementById(id).value;
     const inputNumber = parseFloat(inputValue);
 
@@ -13,9 +13,24 @@ function getTextValueByID(id) {
 }
 
 function showSectionById(id) {
-    document.getElementById('addMoneyDiv').classList.add('hidden');
-    document.getElementById('cashOutDiv').classList.add('hidden');
-    document.getElementById('transactionDiv').classList.add('hidden');
+    document.getElementById('donationCards').classList.add('hidden');
+    document.getElementById('historySection').classList.add('hidden');
+
 
     document.getElementById(id).classList.remove('hidden');
+}
+
+function historyAdding(where,money) {
+    const history = document.getElementById('historySection');
+    const historyDiv = document.createElement('div');
+    const currentTime = new Date();
+    historyDiv.innerHTML = `
+    <div class = "border p-8 rounded-xl space-y-4" >
+        <h3 class = "text-xl font-bold text-[#111]">
+            ${money} Taka is Donate for ${where}, Bangladesh.
+        </h3>
+        <p class="text-base font-light">Date: ${currentTime}</p>
+    </div>
+    `
+    history.appendChild(historyDiv);
 }

@@ -1,7 +1,8 @@
-document.getElementById('btn-donate-noa').addEventListener('click', function(){
+document.getElementById('btn-donate-noa').addEventListener('click', function () {
     const inputNumber = getInputFieldValueById('input-donate-noa');
 
-    if(isNaN(inputNumber)){
+    // Check donation amount validation
+    if (isNaN(inputNumber)) {
         alert("Invalid Donation Amount.");
         document.getElementById('input-donate-noa').value = '';
         return;
@@ -11,20 +12,45 @@ document.getElementById('btn-donate-noa').addEventListener('click', function(){
 
     const totalBalanceNum = getTextValueByID('balance')
 
-    if(inputNumber>totalBalanceNum){
+    // Check greater donation from balance
+    if (inputNumber > totalBalanceNum) {
         alert("Invalid Donation Amount.");
         document.getElementById('input-donate-noa').value = '';
         return;
     }
 
+    // Total Donation Calculation
     const finalDonation = totalDonationNum + inputNumber;
     document.getElementById('total-donation-noa').innerText = finalDonation;
 
+    // Balance Calculation
     const finalBalance = totalBalanceNum - inputNumber;
     document.getElementById('balance').innerText = finalBalance;
+
+    // different work
+    // different work
+    alert("Donation Added");
+    // different work
+    // different work
     
-    // console.log(finalDonation);
+    document.getElementById('input-donate-noa').value = '';
+
+    // Add donate History
+    historyAdding('Flood at Noakhali',inputNumber);
+
 })
 
+// Show Sections start
+document.getElementById('btn-donation').addEventListener('click', function () {
+    showSectionById('donationCards');
+    document.getElementById('btn-history').classList.remove('bg-[#B4F461]');
+    document.getElementById('btn-donation').classList.add('bg-[#B4F461]');
+})
 
-// console.log(inputValue);
+document.getElementById('btn-history').addEventListener('click', function () {
+    showSectionById('historySection');
+    document.getElementById('btn-history').classList.add('bg-[#B4F461]');
+    document.getElementById('btn-donation').classList.remove('bg-[#B4F461]');
+})
+// Show Sections end
+
