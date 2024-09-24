@@ -3,6 +3,10 @@ function getInputFieldValueById(id) {
     const inputValue = document.getElementById(id).value;
     const inputNumber = parseFloat(inputValue);
 
+    if(inputValue.length !== (String(inputNumber)).length){
+        return;
+    }
+
     return inputNumber;
 }
 

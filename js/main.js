@@ -1,4 +1,3 @@
-
 // Card 1 functionality start
 
 document.getElementById('btn-donate-noa').addEventListener('click', function () {
@@ -43,11 +42,6 @@ document.getElementById('btn-donate-noa').addEventListener('click', function () 
 })
 
 // Card 1 functionality end
-
-
-
-
-
 
 
 // Card 2 functionality start
@@ -95,12 +89,6 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
 // Card 2 functionality end
 
 
-
-
-
-
-
-
 // Card 3 functionality start
 
 document.getElementById('btn-donate-protest').addEventListener('click', function () {
@@ -143,15 +131,7 @@ document.getElementById('btn-donate-protest').addEventListener('click', function
 
 })
 
-// Card 2 functionality end
-
-
-
-
-
-
-
-
+// Card 3 functionality end
 
 
 // Show Sections start
@@ -169,6 +149,7 @@ document.getElementById('btn-history').addEventListener('click', function () {
 // Show Sections end
 
 
-document.getElementById('blog-page').addEventListener('click', function(){
+// Navigate Blog page
+document.getElementById('blog-page').addEventListener('click', function () {
     window.location.href = './blog.html';
 })
