@@ -30,16 +30,15 @@ document.getElementById('btn-donate-noa').addEventListener('click', function () 
     const finalBalance = totalBalanceNum - inputNumber;
     document.getElementById('balance').innerText = finalBalance;
 
-    // different work
-    // different work
-    alert("Donation Added");
-    // different work
-    // different work
+    // Modal PopUp
+    my_modal_5.showModal();
 
     document.getElementById('input-donate-noa').value = '';
 
     // Add donate History
     historyAdding('Flood at Noakhali', inputNumber);
+
+
 
 })
 
@@ -82,11 +81,9 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
     const finalBalance = totalBalanceNum - inputNumber;
     document.getElementById('balance').innerText = finalBalance;
 
-    // different work
-    // different work
-    alert("Donation Added");
-    // different work
-    // different work
+
+    // Modal PopUp
+    my_modal_5.showModal();
 
     document.getElementById('input-donate-feni').value = '';
 
@@ -135,11 +132,9 @@ document.getElementById('btn-donate-protest').addEventListener('click', function
     const finalBalance = totalBalanceNum - inputNumber;
     document.getElementById('balance').innerText = finalBalance;
 
-    // different work
-    // different work
-    alert("Donation Added");
-    // different work
-    // different work
+
+    // Modal PopUp
+    my_modal_5.showModal();
 
     document.getElementById('input-donate-protest').value = '';
 
